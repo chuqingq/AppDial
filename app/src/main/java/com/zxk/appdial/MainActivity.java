@@ -109,7 +109,11 @@ public class MainActivity extends Activity implements ThreadHelper.ThreadHeplerU
       updateShortcuts();
 
       Intent intent;
-      if (item.getType() == "uri-scheme") {
+      if (item.getAppName() == "微信-扫一扫") {
+        intent = getPackageManager().getLaunchIntentForPackage("com.tencent.mm");
+        intent.putExtra("LauncherUI.From.Scaner.Shortcut", true);
+      }
+      else if (item.getType() == "uri-scheme") {
         intent = new Intent();
         intent.setAction("android.intent.action.VIEW");
         intent.setData(Uri.parse(item.getPackageName()));

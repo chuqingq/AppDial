@@ -153,6 +153,7 @@ public class AppHelper implements ThreadHelper.ThreadHeplerUser<PackageInfo> {
 
       apps.put(myAppInfo, new Object());
     }
+
     Log.d(AppHelper.class.getName(), Thread.currentThread().getName() + "结束");
   }
 
