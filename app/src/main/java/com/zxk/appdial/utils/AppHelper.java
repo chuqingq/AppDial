@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -88,7 +89,7 @@ public class AppHelper implements ThreadHelper.ThreadHeplerUser<PackageInfo> {
         }
       }
       myAppInfo.setAppName(name);
-      Log.d("chuqq", "appName: " + name);
+//      Log.d("chuqq", "appName: " + name);
       myAppInfo.setClassName(packageInfo.applicationInfo.className);
       myAppInfo.setPinyin(getPinyin(myAppInfo.getAppName(), myAppInfo.getPackageName()));
       myAppInfo.setCount(countHelper.getCount(myAppInfo.getPackageName()));
@@ -110,9 +111,46 @@ public class AppHelper implements ThreadHelper.ThreadHeplerUser<PackageInfo> {
           getBitmapFromDrawable(appIcon).compress(CompressFormat.PNG, 100, outputStream);
           outputStream.close();
         } catch (Exception e) {
-
         }
       }
+      apps.put(myAppInfo, new Object());
+    }
+
+    // chuqq: 增加uri-scheme
+    HashMap<String, String> uriSchemeInfos = new HashMap<String, String>();
+    uriSchemeInfos.put("微信-扫一扫", "weixin://scanqrcode");
+    uriSchemeInfos.put("支付宝-扫一扫", "alipayqr://platformapi/startapp?saId=10000007");
+    uriSchemeInfos.put("支付宝-转账", "alipays://platformapi/startapp?appId=20000116");
+    uriSchemeInfos.put("支付宝-蚂蚁森林", "alipays://platformapi/startapp?appId=60000002");
+    uriSchemeInfos.put("支付宝-蚂蚁庄园", "alipays://platformapi/startapp?appId=66666674");
+    uriSchemeInfos.put("支付宝-收款", "alipays://platformapi/startapp?appId=20000123");
+    uriSchemeInfos.put("支付宝-付款", "alipayqr://platformapi/startapp?sald=20000056");
+    uriSchemeInfos.put("支付宝-红包", "alipays://platformapi/startapp?appId=88886666");
+    uriSchemeInfos.put("支付宝-AA收款", "alipays://platformapi/startapp?appId=20000263");
+    uriSchemeInfos.put("支付宝-记账", "alipay://platformapi/startapp?appId=20000168");
+    uriSchemeInfos.put("支付宝-还信用卡", "alipays://platformapi/startapp?appId=09999999");
+    uriSchemeInfos.put("支付宝-滴滴出行", "alipays://platformapi/startapp?appId=20000778");
+    uriSchemeInfos.put("支付宝-查快递", "alipays://platformapi/startapp?appId=20000754");
+    uriSchemeInfos.put("支付宝-生活缴费", "alipays://platformapi/startapp?appId=20000193");
+    uriSchemeInfos.put("支付宝-彩票", "alipays://platformapi/startapp?appId=10000011");
+    uriSchemeInfos.put("支付宝-淘票票", "alipays://platformapi/startapp?appId=20000131");
+    uriSchemeInfos.put("支付宝-股票", "alipays://platformapi/startapp?appId=20000134");
+    uriSchemeInfos.put("支付宝-蚂蚁宝卡", "alipays://platformapi/startapp?appId=60000057");
+    uriSchemeInfos.put("QQ音乐-最近播放", "qqmusic://today?mid=31&k1=2&k4=0");
+    uriSchemeInfos.put("网易云音乐-听歌识曲", "orpheuswidget://recognize");
+    uriSchemeInfos.put("网易云音乐-私人FM", "orpheuswidget://radio");
+
+    for (String name: uriSchemeInfos.keySet()) {
+      LocalApp myAppInfo = new LocalApp();
+      myAppInfo.setType("uri-scheme");
+      myAppInfo.setAppName(name);
+      myAppInfo.setPackageName(uriSchemeInfos.get(name));
+
+      myAppInfo.setPinyin(getPinyin(myAppInfo.getAppName(), ""));
+      myAppInfo.setCount(countHelper.getCount(myAppInfo.getPackageName()));
+      myAppInfo.setInCount(!countHelper.isUnCount(myAppInfo.getPackageName()));
+      // myAppInfo.setIcon(
+
       apps.put(myAppInfo, new Object());
     }
     Log.d(AppHelper.class.getName(), Thread.currentThread().getName() + "结束");

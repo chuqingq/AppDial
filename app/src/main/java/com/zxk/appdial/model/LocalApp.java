@@ -14,6 +14,8 @@ import android.graphics.drawable.Drawable;
 public class LocalApp implements Serializable, Comparable<LocalApp> {
 
   private static final long serialVersionUID = 1L;
+
+  private String type = "launch"; // chuqq: 默认launch，还支持uri-scheme（packageName是uri-scheme）
   private String appName;
   private String packageName;
   private String className;
@@ -61,6 +63,14 @@ public class LocalApp implements Serializable, Comparable<LocalApp> {
     } else {
       return another.getPinyin().compareTo(getPinyin());// 字母序
     }
+  }
+
+  public String getType() {
+    return type;
+  }
+
+  public void setType(String type) {
+    this.type = type;
   }
 
   public int getCount() {

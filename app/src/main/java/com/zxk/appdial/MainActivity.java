@@ -107,8 +107,16 @@ public class MainActivity extends Activity implements ThreadHelper.ThreadHeplerU
         countHelper.recordAppCount(item.getPackageName(), item.getCount(), MainActivity.this);
       }
       updateShortcuts();
-      PackageManager packageManager = getPackageManager();
-      Intent intent = packageManager.getLaunchIntentForPackage(item.getPackageName());
+
+      Intent intent;
+      if (item.getType() == "uri-scheme") {
+        intent = new Intent();
+        intent.setAction("android.intent.action.VIEW");
+        intent.setData(Uri.parse(item.getPackageName()));
+      } else {
+        // chuqq: 默认情况，作为应用拉起
+        intent = getPackageManager().getLaunchIntentForPackage(item.getPackageName());
+      }
       startActivity(intent);
     });
 
