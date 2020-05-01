@@ -12,8 +12,18 @@
 1. ~~完善排序方式，经常搜索打开的app排序显示在中央（离手指近）~~
     * 经常使用的app顺序排在前面，离手指近暂时没想好怎么做
 1. 对搜索结果能做卸载
-1. 加入主题色配置 捐赠通道？
-1. more....
+
+chuqq: 功能计划
+
+- [x] 通过`getLaunchIntentForPackage`的方式启动所有应用
+- [x] 通过URI-scheme方式启动常用的activity。例如支付宝-蚂蚁庄园， [webview方式跳转url-scheme](https://blog.csdn.net/LVXIANGAN/article/details/84552681)
+- [ ] 其他无法用scheme方式打开activity。例如微信-扫一扫，[打开微信扫一扫activity](https://blog.csdn.net/bluezhangfun/article/details/77444053)
+- [ ] 剩下的没有明确入口的activity。例如蚂蚁森林收能量，[模拟点击](https://github.com/sufadi/AccessibilityServiceMonitor)
+- [ ] 分级显示：例如先输入支付宝，可以选择“支付宝-打开应用”或“支付宝-其他功能”，点击后者，会展示出“蚂蚁森林”等功能，仍然可以用T9方式搜索
+- [ ] 更进一步：如果可以在其他应用上做遮罩，那可以做应用内T9搜索。
+
+
+
 
 # 下载
 * 没钱上架Google play，酷安基佬请[戳](https://www.coolapk.com/apk/169105)
