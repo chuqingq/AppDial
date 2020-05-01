@@ -88,6 +88,7 @@ public class AppHelper implements ThreadHelper.ThreadHeplerUser<PackageInfo> {
         }
       }
       myAppInfo.setAppName(name);
+      Log.d("chuqq", "appName: " + name);
       myAppInfo.setClassName(packageInfo.applicationInfo.className);
       myAppInfo.setPinyin(getPinyin(myAppInfo.getAppName(), myAppInfo.getPackageName()));
       myAppInfo.setCount(countHelper.getCount(myAppInfo.getPackageName()));

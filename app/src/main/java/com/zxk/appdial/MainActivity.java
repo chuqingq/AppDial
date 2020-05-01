@@ -24,6 +24,7 @@ import android.os.Handler;
 import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -94,12 +95,13 @@ public class MainActivity extends Activity implements ThreadHelper.ThreadHeplerU
     listViewAdapter = new ListViewAdapter();
     fuckOPPO();
     apppsListView.setAdapter(listViewAdapter);
+    // chuqq: 这里启动应用
     apppsListView.setOnItemClickListener((parent, view, position, id) -> {
       LocalApp item = (LocalApp) listViewAdapter.getItem(position);
-      Bundle bundle = new Bundle();
-      bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, Build.MODEL);
-      bundle.putString(FirebaseAnalytics.Param.ITEM_ID, item.getAppName());
-      firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
+//      Bundle bundle = new Bundle();
+//      bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, Build.MODEL);
+//      bundle.putString(FirebaseAnalytics.Param.ITEM_ID, item.getAppName());
+//      firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
       if (item.isInCount()) {
         item.setCount(item.getCount() + 1);
         countHelper.recordAppCount(item.getPackageName(), item.getCount(), MainActivity.this);
@@ -133,7 +135,7 @@ public class MainActivity extends Activity implements ThreadHelper.ThreadHeplerU
                   .setIntent(intent)
                   .setIcon(
                       Icon.createWithBitmap(drawableToBitmap(packageInfo.applicationInfo
-                          .loadIcon(packageManager)))).setShortLabel(appName).setLongLabel(appName)
+                          .loadIcon(packageManager)))).setShortLabel("chuqq"+appName).setLongLabel(appName)
                   .build();
               shortcutInfos.add(shortcutInfo);
             }
@@ -141,6 +143,7 @@ public class MainActivity extends Activity implements ThreadHelper.ThreadHeplerU
 
           }
         }
+        // chuqq: 这里的shortcut是长按应用图标后弹出的菜单
         shortcutManager.setDynamicShortcuts(shortcutInfos);
       }
     }
