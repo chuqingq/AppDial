@@ -1,6 +1,7 @@
 package com.zxk.appdial.model;
 
 import java.io.Serializable;
+import java.util.HashMap;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 
@@ -15,10 +16,13 @@ public class LocalApp implements Serializable, Comparable<LocalApp> {
 
   private static final long serialVersionUID = 1L;
 
-  private String type = "launch"; // chuqq: 默认launch，还支持uri-scheme（packageName是uri-scheme）
+  private String type = "launch"; // chuqq: 默认launch，还支持uri-scheme（packageName是uri-scheme）、shortcut
   private String appName;
   private String packageName;
   private String className;
+
+  private HashMap<String, String> extras; // chuqq: 仅当type为shortcut时有效
+
   private Drawable icon;
   private String simpleChn;
   private String pinyin;
@@ -64,6 +68,26 @@ public class LocalApp implements Serializable, Comparable<LocalApp> {
       return another.getPinyin().compareTo(getPinyin());// 字母序
     }
   }
+
+  public String getAction() {
+    return action;
+  }
+
+  public void setAction(String action) {
+    this.action = action;
+  }
+
+
+  private String action; // chuqq: 仅当type为shortcut时有效
+
+  public HashMap<String, String> getExtras() {
+    return extras;
+  }
+
+  public void setExtras(HashMap<String, String> extras) {
+    this.extras = extras;
+  }
+
 
   public String getType() {
     return type;

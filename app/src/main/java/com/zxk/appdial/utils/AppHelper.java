@@ -119,12 +119,12 @@ public class AppHelper implements ThreadHelper.ThreadHeplerUser<PackageInfo> {
     // chuqq: 增加uri-scheme
     HashMap<String, String> uriSchemeInfos = new HashMap<String, String>();
     uriSchemeInfos.put("微信-扫一扫", "weixin://scanqrcode");
-    uriSchemeInfos.put("支付宝-扫一扫", "alipayqr://platformapi/startapp?saId=10000007");
+    uriSchemeInfos.put("支付宝-扫一扫", "alipays://platformapi/startapp?appId=10000007&source=nougat_shortcut&sourceId=nougat_shortcut_scan");
     uriSchemeInfos.put("支付宝-转账", "alipays://platformapi/startapp?appId=20000116");
     uriSchemeInfos.put("支付宝-蚂蚁森林", "alipays://platformapi/startapp?appId=60000002");
     uriSchemeInfos.put("支付宝-蚂蚁庄园", "alipays://platformapi/startapp?appId=66666674");
     uriSchemeInfos.put("支付宝-收款", "alipays://platformapi/startapp?appId=20000123");
-    uriSchemeInfos.put("支付宝-付款", "alipayqr://platformapi/startapp?sald=20000056");
+    uriSchemeInfos.put("支付宝-付款", "alipays://platformapi/startapp?appId=20000056&source=nougat_shortcut");
     uriSchemeInfos.put("支付宝-红包", "alipays://platformapi/startapp?appId=88886666");
     uriSchemeInfos.put("支付宝-AA收款", "alipays://platformapi/startapp?appId=20000263");
     uriSchemeInfos.put("支付宝-记账", "alipay://platformapi/startapp?appId=20000168");
@@ -140,6 +140,9 @@ public class AppHelper implements ThreadHelper.ThreadHeplerUser<PackageInfo> {
     uriSchemeInfos.put("网易云音乐-听歌识曲", "orpheuswidget://recognize");
     uriSchemeInfos.put("网易云音乐-私人FM", "orpheuswidget://radio");
 
+    uriSchemeInfos.put("QQ音乐-听歌识曲", "1111");
+
+
     for (String name: uriSchemeInfos.keySet()) {
       LocalApp myAppInfo = new LocalApp();
       myAppInfo.setType("uri-scheme");
@@ -154,7 +157,40 @@ public class AppHelper implements ThreadHelper.ThreadHeplerUser<PackageInfo> {
       apps.put(myAppInfo, new Object());
     }
 
+    // chuqq: 根据dumpsys shortcut来启动
+    // chuqq: TODO 保存数据
+    {
+      // 蛋塔秀Infi000的直播间
+      HashMap<String, String> shortcut = new HashMap<String, String>();
+      shortcut.put("packageName", "air.tv.douyu.android");
+      shortcut.put("shortLabel", "蛋塔秀Infi000的直播间");
+      shortcut.put("intents.act", "android.intent.action.VIEW");
+      shortcut.put("intents.cmp.pkg", "air.tv.douyu.android");
+      shortcut.put("intents.cmp.cls", "tv.douyu.view.activity.launcher.DYLauncherActivity");
+
+      HashMap<String, String> extras = new HashMap<String, String>();
+      extras.put("roomId", "11017");
+
+      addShortcut(shortcut, extras);
+    }
+
     Log.d(AppHelper.class.getName(), Thread.currentThread().getName() + "结束");
+  }
+
+  private void addShortcut(HashMap<String, String> shortcut, HashMap<String, String> extras) {
+    LocalApp app = new LocalApp();
+    app.setType("shortcut");
+    app.setPackageName(shortcut.get("packageName"));
+    app.setAppName(shortcut.get("shortLabel"));
+    app.setAction(shortcut.get("intents.act"));
+    app.setClassName(shortcut.get("intents.cmp.cls"));
+    app.setExtras(extras);
+
+    app.setPinyin(getPinyin(app.getAppName(), ""));
+    app.setCount(countHelper.getCount(app.getPackageName()));
+    app.setInCount(!countHelper.isUnCount(app.getPackageName()));
+
+    apps.put(app, new Object());
   }
 
   private Bitmap getBitmapFromDrawable(@NonNull Drawable drawable) {
