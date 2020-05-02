@@ -1,0 +1,2150 @@
+[
+  {
+    "packageName": "com.github.shadowsocks",
+    "shortLabel": "开关",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.github.shadowsocks",
+        "cls": ".QuickToggleShortcut"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.github.shadowsocks",
+    "shortLabel": "扫描二维码",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.github.shadowsocks",
+        "cls": ".ScannerActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.huawei.camera",
+    "shortLabel": "录像",
+    "intents": {
+      "act": "com.huawei.camera.shortcut.BACK_VIDEO",
+      "cmp": {
+        "pkg": "com.huawei.camera",
+        "cls": ".controller.CameraActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.huawei.camera",
+    "shortLabel": "大光圈拍照",
+    "intents": {
+      "act": "com.huawei.camera.shortcut.BACK_APERTURE",
+      "flg": "0x10008000"
+    }
+  },
+  {
+    "packageName": "com.huawei.camera",
+    "shortLabel": "动态照片",
+    "intents": {
+      "act": "com.huawei.camera.shortcut.BACK_LIVE_PHOTO",
+      "flg": "0x10008000"
+    }
+  },
+  {
+    "packageName": "com.huawei.camera",
+    "shortLabel": "自拍",
+    "intents": {
+      "act": "com.huawei.camera.shortcut.FRONT_BEAUTY",
+      "cmp": {
+        "pkg": "com.huawei.camera",
+        "cls": ".controller.CameraActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.android.mediacenter",
+    "shortLabel": "播放音乐",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "cmp": {
+        "pkg": "com.android.mediacenter",
+        "cls": ".openability.quickaction.ShortcutPlayActivity"
+      },
+      "flg": "0x10008000",
+      "pb": {
+        "is_play_music": "true",
+        "HW-QUICK-ACTION": "shortcut_play"
+      }
+    }
+  },
+  {
+    "packageName": "com.android.mediacenter",
+    "shortLabel": "最近播放",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "cmp": {
+        "pkg": "com.android.mediacenter",
+        "cls": ".openability.quickaction.ShortcutRecentPlayActivity"
+      },
+      "flg": "0x10008000",
+      "pb": {
+        "is_play_music": "true",
+        "HW-QUICK-ACTION": "shortcut_recent_play"
+      }
+    }
+  },
+  {
+    "packageName": "com.zxk.appdial",
+    "shortLabel": "chuqqTermux",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.termux",
+        "cls": ".app.TermuxActivity"
+      },
+      "cat": "android.intent.category.LAUNCHER] flg=0x10000000 pkg=com.termux cmp=com.termux/.app.TermuxActivity }/null",
+      "flg": "0x10000000"
+    }
+  },
+  {
+    "packageName": "com.zxk.appdial",
+    "shortLabel": "chuqq支付宝",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.eg.android.AlipayGphone",
+        "cls": ".AlipayLogin"
+      },
+      "cat": "android.intent.category.LAUNCHER] flg=0x10000000 pkg=com.eg.android.AlipayGphone cmp=com.eg.android.AlipayGphone/.AlipayLogin }/null",
+      "flg": "0x10000000"
+    }
+  },
+  {
+    "packageName": "com.huawei.android.thememanager",
+    "shortLabel": "主题",
+    "intents": {
+      "act": "huawei.intent.action.SELECT_THEME",
+      "cmp": {
+        "pkg": "com.huawei.android.thememanager",
+        "cls": ".HwThemeShortCutActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.huawei.android.thememanager",
+    "shortLabel": "字体",
+    "intents": {
+      "act": "huawei.intent.action.SELECT_FONT",
+      "cmp": {
+        "pkg": "com.huawei.android.thememanager",
+        "cls": ".HwThemeShortCutActivity"
+      },
+      "flg": "0x10008000"
+    }
+  },
+  {
+    "packageName": "com.huawei.android.thememanager",
+    "shortLabel": "铃声",
+    "intents": {
+      "act": "huawei.intent.action.SELECT_RING",
+      "cmp": {
+        "pkg": "com.huawei.android.thememanager",
+        "cls": ".HwThemeShortCutActivity"
+      },
+      "flg": "0x10008000"
+    }
+  },
+  {
+    "packageName": "com.huawei.android.thememanager",
+    "shortLabel": "壁纸",
+    "intents": {
+      "act": "huawei.intent.action.SELECT_WALL_PAGER",
+      "cmp": {
+        "pkg": "com.huawei.android.thememanager",
+        "cls": ".HwThemeShortCutActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.qiyi.video",
+    "shortLabel": "热播榜单",
+    "intents": {
+      "act": "com.qiyi.video.main",
+      "pb": {
+        "source_type": "shortcuts",
+        "shortcut_id": "shortcut_hotlist"
+      }
+    }
+  },
+  {
+    "packageName": "com.qiyi.video",
+    "shortLabel": "观看历史",
+    "intents": {
+      "act": "com.qiyi.video.main",
+      "pb": {
+        "source_type": "shortcuts",
+        "shortcut_id": "shortcut_play_history"
+      }
+    }
+  },
+  {
+    "packageName": "com.qiyi.video",
+    "shortLabel": "全网搜索",
+    "intents": {
+      "act": "com.qiyi.video.main",
+      "pb": {
+        "source_type": "shortcuts",
+        "shortcut_id": "shortcut_research"
+      }
+    }
+  },
+  {
+    "packageName": "com.qiyi.video",
+    "shortLabel": "离线视频",
+    "intents": {
+      "act": "com.qiyi.video.main",
+      "pb": {
+        "source_type": "shortcuts",
+        "shortcut_id": "shortcut_offline_video"
+      }
+    }
+  },
+  {
+    "packageName": "com.sankuai.meituan",
+    "shortLabel": "订单",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "cmp": {
+        "pkg": "com.sankuai.meituan",
+        "cls": "com.meituan.android.pt.homepage.activity.MainActivity"
+      },
+      "flg": "0x1000c000",
+      "pb": {
+        "shortcut_extra": "shortcut_order"
+      }
+    }
+  },
+  {
+    "packageName": "com.sankuai.meituan",
+    "shortLabel": "搜索",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "cmp": {
+        "pkg": "com.sankuai.meituan",
+        "cls": "com.meituan.android.pt.homepage.activity.MainActivity"
+      },
+      "flg": "0x1000c000",
+      "pb": {
+        "shortcut_extra": "shortcut_search"
+      }
+    }
+  },
+  {
+    "packageName": "com.sankuai.meituan",
+    "shortLabel": "扫一扫",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "cmp": {
+        "pkg": "com.sankuai.meituan",
+        "cls": "com.meituan.android.pt.homepage.activity.MainActivity"
+      },
+      "flg": "0x1000c000",
+      "pb": {
+        "shortcut_extra": "shortcut_scan"
+      }
+    }
+  },
+  {
+    "packageName": "air.tv.douyu.android",
+    "shortLabel": "蛋塔秀Infi000的直播间",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "dydeeplink://?type=80001",
+      "cmp": {
+        "pkg": "air.tv.douyu.android",
+        "cls": "tv.douyu.view.activity.launcher.DYLauncherActivity"
+      },
+      "cat": "android.intent.category.DEFAULT] dat=dydeeplink://?type=80001 cmp=air.tv.douyu.android/tv.douyu.view.activity.launcher.DYLauncherActivity }/PersistableBundle[{roomId=11017}]",
+      "pb": {
+        "roomId": "11017"
+      }
+    }
+  },
+  {
+    "packageName": "com.huawei.appmarket",
+    "shortLabel": "搜索",
+    "intents": {
+      "act": "com.huawei.appmarket.appmarket.intent.action.SearchActivity",
+      "cmp": {
+        "pkg": "com.huawei.appmarket",
+        "cls": ".service.externalapi.view.ThirdApiActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.huawei.appmarket",
+    "shortLabel": "更新",
+    "intents": {
+      "act": "com.huawei.appmarket.appmarket.intent.action.appmanager",
+      "cmp": {
+        "pkg": "com.huawei.appmarket",
+        "cls": ".service.externalapi.view.ThirdApiActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.huawei.appmarket",
+    "shortLabel": "活动福利",
+    "intents": {
+      "act": "com.huawei.appmarket.appmarket.intent.action.campaign.gift",
+      "cmp": {
+        "pkg": "com.huawei.appmarket",
+        "cls": ".service.externalapi.view.ThirdApiActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.tencent.qqmusic",
+    "shortLabel": "播放本地",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "cmp": {
+        "pkg": "com.tencent.qqmusic",
+        "cls": ".third.DispacherActivityForThird"
+      },
+      "flg": "0x1000c000",
+      "pb": {
+        "shortcutScheme": "playLocal"
+      }
+    }
+  },
+  {
+    "packageName": "com.tencent.qqmusic",
+    "shortLabel": "搜索歌曲",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "cmp": {
+        "pkg": "com.tencent.qqmusic",
+        "cls": ".third.DispacherActivityForThird"
+      },
+      "flg": "0x1000c000",
+      "pb": {
+        "shortcutScheme": "searchSong"
+      }
+    }
+  },
+  {
+    "packageName": "com.tencent.qqmusic",
+    "shortLabel": "听歌识曲",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "cmp": {
+        "pkg": "com.tencent.qqmusic",
+        "cls": ".third.DispacherActivityForThird"
+      },
+      "flg": "0x1000c000",
+      "pb": {
+        "shortcutScheme": "recognize"
+      }
+    }
+  },
+  {
+    "packageName": "com.tencent.qqmusic",
+    "shortLabel": "最近播放",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "cmp": {
+        "pkg": "com.tencent.qqmusic",
+        "cls": ".third.DispacherActivityForThird"
+      },
+      "flg": "0x1000c000",
+      "pb": {
+        "shortcutScheme": "playRecent"
+      }
+    }
+  },
+  {
+    "packageName": "com.huawei.hnreader",
+    "shortLabel": "继续阅读",
+    "intents": {
+      "act": "shortcut_continuetoread",
+      "cmp": {
+        "pkg": "com.huawei.hnreader",
+        "cls": "com.qq.reader.activity.SplashActivity"
+      }
+    }
+  },
+  {
+    "packageName": "com.huawei.hnreader",
+    "shortLabel": "签到",
+    "intents": {
+      "act": "shortcut_sign",
+      "cmp": {
+        "pkg": "com.huawei.hnreader",
+        "cls": "com.qq.reader.activity.SplashActivity"
+      }
+    }
+  },
+  {
+    "packageName": "com.huawei.hnreader",
+    "shortLabel": "搜索",
+    "intents": {
+      "act": "shortcut_search",
+      "cmp": {
+        "pkg": "com.huawei.hnreader",
+        "cls": "com.qq.reader.activity.SplashActivity"
+      }
+    }
+  },
+  {
+    "packageName": "com.huawei.hnreader",
+    "shortLabel": "今日免费",
+    "intents": {
+      "act": "shortcut_limittofree",
+      "cmp": {
+        "pkg": "com.huawei.hnreader",
+        "cls": "com.qq.reader.activity.SplashActivity"
+      }
+    }
+  },
+  {
+    "packageName": "com.android.documentsui",
+    "shortLabel": "图片",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "content://com.android.providers.media.documents/root/images_root",
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.huawei.wallet",
+    "shortLabel": "扫一扫",
+    "intents": {
+      "act": "com.huawei.oto.intent.action.SHORTCUT_QRCODE_SCAN",
+      "pb": {
+        "countReport": "扫一扫"
+      }
+    }
+  },
+  {
+    "packageName": "com.huawei.wallet",
+    "shortLabel": "付款码",
+    "intents": {
+      "act": "com.huawei.pay.intent.action.SHORTCUT_PAYMENT_CODE",
+      "pb": {
+        "countReport": "付款码"
+      }
+    }
+  },
+  {
+    "packageName": "com.huawei.wallet",
+    "shortLabel": "刷卡",
+    "intents": {
+      "act": "com.huawei.nfc.intent.action.SHORTCUT_NFC_SWIPE",
+      "pb": {
+        "countReport": "刷卡"
+      }
+    }
+  },
+  {
+    "packageName": "com.dianping.v1",
+    "shortLabel": "看附近",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "dianping://shoplist?source=suggestnearbyshoplist&launchsource=coldlaunch&utm=shortcuts",
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.dianping.v1",
+    "shortLabel": "查商户",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "dianping://websearch?defaultSearch=1&utm=shortcuts",
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.dianping.v1",
+    "shortLabel": "付款码",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "dianping://web?url=https://quickpass.meituan.com/resource/unionpay/index.html?entry=home&token=!&utm=shortcuts",
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.dianping.v1",
+    "shortLabel": "扫一扫",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "dianping://barcodescan?utm=shortcuts",
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.mt.mtxx.mtxx",
+    "shortLabel": "滤镜",
+    "intents": {
+      "act": "com.meitu.intent.action.SHORTCUT_ENTRANCE",
+      "dat": "mtxxshortcut://meihua/effect"
+    }
+  },
+  {
+    "packageName": "com.mt.mtxx.mtxx",
+    "shortLabel": "相机",
+    "intents": {
+      "act": "com.meitu.intent.action.SHORTCUT_ENTRANCE",
+      "dat": "mtxxshortcut://camera"
+    }
+  },
+  {
+    "packageName": "com.mt.mtxx.mtxx",
+    "shortLabel": "马赛克",
+    "intents": {
+      "act": "com.meitu.intent.action.SHORTCUT_ENTRANCE",
+      "dat": "mtxxshortcut://meihua/mosaic"
+    }
+  },
+  {
+    "packageName": "com.huawei.fastapp",
+    "shortLabel": "汽车之家极速版",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.huawei.fastapp",
+        "cls": ".app.processManager.RpkLoaderActivityEntry"
+      },
+      "cat": "android.intent.category.DEFAULT] cmp=com.huawei.fastapp/.app.processManager.RpkLoaderActivityEntry }/PersistableBundle[{rpk_load_hash=7bc733da78c8da96f8865cb65639e790ddf0b985a9d21b3caaef8f42097d9ba8, rpk_load_path=http://appdlc.hicloud.com/dl/appdl/application/apk/a4/a47482325619436ab01cadf9190688cb/com.autohome.quickapp.1909261849.rpk?source=rpk&maple=0&trackId=0&distOpEntity=HWSW, rpk_load_type=null, rpk_load_app_id=C100241877, rpk_load_source=shortcut_api|fastappList_other, rpk_load_package=com.autohome.quickapp}]",
+      "pb": {
+        "rpk_load_hash": "7bc733da78c8da96f8865cb65639e790ddf0b985a9d21b3caaef8f42097d9ba8",
+        "rpk_load_path": "http://appdlc.hicloud.com/dl/appdl/application/apk/a4/a47482325619436ab01cadf9190688cb/com.autohome.quickapp.1909261849.rpk?source=rpk&maple=0&trackId=0&distOpEntity=HWSW",
+        "rpk_load_type": "null",
+        "rpk_load_app_id": "C100241877",
+        "rpk_load_source": "shortcut_api|fastappList_other",
+        "rpk_load_package": "com.autohome.quickapp"
+      }
+    }
+  },
+  {
+    "packageName": "com.huawei.fastapp",
+    "shortLabel": "高铁管家",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.huawei.fastapp",
+        "cls": ".app.processManager.RpkLoaderActivityEntry"
+      },
+      "cat": "android.intent.category.DEFAULT] cmp=com.huawei.fastapp/.app.processManager.RpkLoaderActivityEntry }/PersistableBundle[{rpk_load_hash=29d435abc8992aeff99d66378d023d7c06d6b71ae57b2b97582511b0a46d3023, rpk_load_path=http://appdlc.hicloud.com/dl/appdl/application/apk/97/977482f9a3504bb2821eb0d048c1065a/com.hlth.gtgj.mini.1912311821.rpk?source=rpk&maple=0&distOpEntity=HWSW, rpk_load_type=null, rpk_load_app_id=C100228521, rpk_load_source=shortcut_api|com.huawei.appmarket_url, rpk_load_package=com.hlth.gtgj.mini}]",
+      "pb": {
+        "rpk_load_hash": "29d435abc8992aeff99d66378d023d7c06d6b71ae57b2b97582511b0a46d3023",
+        "rpk_load_path": "http://appdlc.hicloud.com/dl/appdl/application/apk/97/977482f9a3504bb2821eb0d048c1065a/com.hlth.gtgj.mini.1912311821.rpk?source=rpk&maple=0&distOpEntity=HWSW",
+        "rpk_load_type": "null",
+        "rpk_load_app_id": "C100228521",
+        "rpk_load_source": "shortcut_api|com.huawei.appmarket_url",
+        "rpk_load_package": "com.hlth.gtgj.mini"
+      }
+    }
+  },
+  {
+    "packageName": "com.huawei.fastapp",
+    "shortLabel": "极简Todo",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.huawei.fastapp",
+        "cls": ".app.processManager.RpkLoaderActivityEntry"
+      },
+      "cat": "android.intent.category.DEFAULT] cmp=com.huawei.fastapp/.app.processManager.RpkLoaderActivityEntry }/PersistableBundle[{rpk_load_hash=null, rpk_load_path=null, rpk_load_type=fastapp, rpk_detail_type=0, rpk_show_detail_url=null, rpk_exemption_type=0, rpk_load_app_id=C100601563, rpk_load_source=shortcut_dialog|com.huawei.appmarket_url, rpk_load_package=com.fancy.simple}]",
+      "pb": {
+        "rpk_load_hash": "null",
+        "rpk_load_path": "null",
+        "rpk_load_type": "fastapp",
+        "rpk_detail_type": "0",
+        "rpk_show_detail_url": "null",
+        "rpk_exemption_type": "0",
+        "rpk_load_app_id": "C100601563",
+        "rpk_load_source": "shortcut_dialog|com.huawei.appmarket_url",
+        "rpk_load_package": "com.fancy.simple"
+      }
+    }
+  },
+  {
+    "packageName": "com.huawei.fastapp",
+    "shortLabel": "快应用中心",
+    "intents": {
+      "act": "com.huawei.fastapp.app.manager.action.SHORTCUT",
+      "cmp": {
+        "pkg": "com.huawei.fastapp",
+        "cls": ".app.management.ui.ManagerActivity"
+      },
+      "cat": "android.intent.category.DEFAULT] cmp=com.huawei.fastapp/.app.management.ui.ManagerActivity }/PersistableBundle[{ intent_shortcut_id=com.huawei.fastapp.app.manager}]",
+      "pb": {
+        "intent_shortcut_id": "com.huawei.fastapp.app.manager"
+      }
+    }
+  },
+  {
+    "packageName": "com.huawei.fastapp.dev",
+    "shortLabel": "极简待办",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.huawei.fastapp.dev",
+        "cls": "com.huawei.fastapp.app.processManager.RpkLoaderActivityEntry"
+      },
+      "cat": "android.intent.category.DEFAULT] cmp=com.huawei.fastapp.dev/com.huawei.fastapp.app.processManager.RpkLoaderActivityEntry }/PersistableBundle[{rpk_load_hash=null, rpk_load_path=http://127.0.0.1:51500/io.gitee.chuqq.todo.rpk, rpk_load_app_id=io.gitee.chuqq.todo, rpk_load_source=shortcut_dialog|history_other, rpk_load_package=io.gitee.chuqq.todo}]",
+      "pb": {
+        "rpk_load_hash": "null",
+        "rpk_load_path": "http://127.0.0.1:51500/io.gitee.chuqq.todo.rpk",
+        "rpk_load_app_id": "io.gitee.chuqq.todo",
+        "rpk_load_source": "shortcut_dialog|history_other",
+        "rpk_load_package": "io.gitee.chuqq.todo"
+      }
+    }
+  },
+  {
+    "packageName": "com.android.soundrecorder",
+    "shortLabel": "查看录音列表",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.android.soundrecorder",
+        "cls": ".RecordListActivity"
+      },
+      "cat": "android.intent.category.LAUNCHER] flg=0x8000 cmp=com.android.soundrecorder/.RecordListActivity }/PersistableBundle[{intent_from_shortcut=true}]",
+      "flg": "0x8000",
+      "pb": {
+        "intent_from_shortcut": "true"
+      }
+    }
+  },
+  {
+    "packageName": "com.android.soundrecorder",
+    "shortLabel": "开始录音",
+    "intents": {
+      "act": "com.android.soundrecorder.Start",
+      "cmp": {
+        "pkg": "com.android.soundrecorder",
+        "cls": ".SoundRecorderInner"
+      },
+      "pb": {
+        "intent_from_shortcut": "true"
+      }
+    }
+  },
+  {
+    "packageName": "com.yinxiang",
+    "shortLabel": "拍照",
+    "intents": {
+      "act": "com.evernote.widget.action.NEW_SNAPSHOT",
+      "cmp": {
+        "pkg": "com.yinxiang",
+        "cls": "com.evernote.ui.ContractNoUiActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.yinxiang",
+    "shortLabel": "搜索",
+    "intents": {
+      "act": "com.yinxiang.action.SEARCH",
+      "cmp": {
+        "pkg": "com.yinxiang",
+        "cls": "com.evernote.ui.ContractNoUiActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.yinxiang",
+    "shortLabel": "文字识别",
+    "intents": {
+      "act": "com.evernote.widget.action.WIDGET_OCR",
+      "cmp": {
+        "pkg": "com.yinxiang",
+        "cls": "com.evernote.ui.ContractNoUiActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.yinxiang",
+    "shortLabel": "录音",
+    "intents": {
+      "act": "com.evernote.widget.action.NEW_VOICE_NOTE",
+      "cmp": {
+        "pkg": "com.yinxiang",
+        "cls": "com.evernote.ui.ContractNoUiActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.yinxiang",
+    "shortLabel": "速记",
+    "intents": {
+      "act": "com.evernote.widget.action.CREATE_QUICK_NOTE",
+      "cmp": {
+        "pkg": "com.yinxiang",
+        "cls": "com.evernote.ui.ContractNoUiActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.tencent.mm",
+    "shortLabel": "中国电信营业厅",
+    "intents": {
+      "act": "com.tencent.mm.action.WX_SHORTCUT",
+      "flg": "0x4000000",
+      "pb": {
+        "ext_info": "shortcut_2b6ac299c287c2b7c288526c5e0bc39f7431c2a32f17c395c38a",
+        "digest": "2d451d9b67644aa9a73f3f29a097c4f4",
+        "id": "shortcut_3b7ac2a2c284c3a4c28d046e0c04c39d7334c2ae2f65c283c28f26",
+        "type": "1",
+        "token": "1edf60573eb959e8d881a62afb73b1ae",
+        "ext_info_1": "0"
+      }
+    }
+  },
+  {
+    "packageName": "com.tencent.mm",
+    "shortLabel": "车来了精准实时公交",
+    "intents": {
+      "act": "com.tencent.mm.action.WX_SHORTCUT",
+      "flg": "0x4000000",
+      "pb": {
+        "ext_info": "shortcut_2b6ac38ac282c2b7c39c0c605a5cc3992764c3be2d16c390c38e",
+        "digest": "61f1c6b4dbe1711e64ec02d0fa0e0222",
+        "id": "shortcut_3b7ac2a2c280c3a6c28b506b0909c28c703fc2a32865c283c28f26",
+        "type": "1",
+        "token": "21ac2bcac55414ff4906aa31ed3857a2",
+        "ext_info_1": "0"
+      }
+    }
+  },
+  {
+    "packageName": "com.tencent.mm",
+    "shortLabel": "速停车",
+    "intents": {
+      "act": "com.tencent.mm.action.BIZSHORTCUT",
+      "flg": "0x4000000",
+      "pb": {
+        "LauncherUI.From.Biz.Shortcut": "true",
+        "app_shortcut_custom_id": "shortcut_c29b1c5e57c3a742c2bb57c28545c38ac3b8c3955a04",
+        "LauncherUI.Shortcut.Username": "shortcut_c29b1c5e57c3a742c2bb57c28545c38ac3b8c3955a04"
+      }
+    }
+  },
+  {
+    "packageName": "com.alibaba.cloudmail",
+    "shortLabel": "新建日历事项",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "cmp": {
+        "pkg": "com.alibaba.cloudmail",
+        "cls": "com.alibaba.alimei.lanucher.activity.ShortcutActivity"
+      },
+      "pb": {
+        "action_key": "61"
+      }
+    }
+  },
+  {
+    "packageName": "com.alibaba.cloudmail",
+    "shortLabel": "写邮件",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "cmp": {
+        "pkg": "com.alibaba.cloudmail",
+        "cls": "com.alibaba.alimei.lanucher.activity.ShortcutActivity"
+      },
+      "pb": {
+        "action_key": "58"
+      }
+    }
+  },
+  {
+    "packageName": "com.tencent.android.qqdownloader",
+    "shortLabel": "随便看看",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "tmast://webview?url=http://qzs.qq.com/open/yyb/red_flower/html/index.html#curType=1",
+      "flg": "0x4000000",
+      "pb": {
+        "is_from_appshortcut_click": "true"
+      }
+    }
+  },
+  {
+    "packageName": "com.tencent.android.qqdownloader",
+    "shortLabel": "扫一扫",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "tmast://qr_scan",
+      "flg": "0x4000000",
+      "pb": {
+        "is_from_appshortcut_click": "true"
+      }
+    }
+  },
+  {
+    "packageName": "com.tencent.android.qqdownloader",
+    "shortLabel": "清理加速",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "tmast://spaceclean",
+      "flg": "0x4000000",
+      "pb": {
+        "is_from_appshortcut_click": "true"
+      }
+    }
+  },
+  {
+    "packageName": "com.android.contacts",
+    "shortLabel": "新建联系人",
+    "intents": {
+      "act": "android.intent.action.INSERT",
+      "dat": "content://com.android.contacts/contacts",
+      "cmp": {
+        "pkg": "com.android.contacts",
+        "cls": ".activities.ContactEditorActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.android.contacts",
+    "shortLabel": "常用联系人",
+    "intents": {
+      "act": "com.android.contacts.action.LIST_STREQUENT",
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.android.contacts",
+    "shortLabel": "常用联系人",
+    "intents": {
+      "act": "com.android.contacts.action.LIST_STREQUENT",
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.android.contacts",
+    "shortLabel": "扫名片",
+    "intents": {
+      "act": "com.huawei.camera.cardreader.STILL_IMAGE2",
+      "flg": "0x8000",
+      "pb": {
+        "start_card_activity": "true",
+        "key_image_requst_precise": "false"
+      }
+    }
+  },
+  {
+    "packageName": "com.android.contacts",
+    "shortLabel": "我的名片",
+    "intents": {
+      "act": "com.android.contacts.action.shortcut.me",
+      "flg": "0x8000",
+      "pb": {
+        "extraShortcutType": "1"
+      }
+    }
+  },
+  {
+    "packageName": "com.android.contacts",
+    "shortLabel": "新建联系人",
+    "intents": {
+      "act": "android.intent.action.INSERT",
+      "dat": "content://com.android.contacts/contacts",
+      "cmp": {
+        "pkg": "com.android.contacts",
+        "cls": ".activities.ContactEditorActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.android.mms",
+    "shortLabel": "新建信息",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "cmp": {
+        "pkg": "com.android.mms",
+        "cls": ".ui.ComposeMessageActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.android.calendar",
+    "shortLabel": "查看日程",
+    "intents": {
+      "act": "android.intent.action.shortcut.AGENDA",
+      "cmp": {
+        "pkg": "com.android.calendar",
+        "cls": ".AllInOneActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.android.calendar",
+    "shortLabel": "新建日程",
+    "intents": {
+      "act": "android.intent.action.EDIT",
+      "cmp": {
+        "pkg": "com.android.calendar",
+        "cls": ".event.EditEventActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.huawei.systemmanager",
+    "shortLabel": "清理加速",
+    "intents": {
+      "act": "com.huawei.systemmanager.intent.action.SPACE_CLEAN",
+      "cmp": {
+        "pkg": "com.huawei.systemmanager",
+        "cls": ".appfeature.spacecleaner.SpaceCleanActivity"
+      },
+      "flg": "0x30008000"
+    }
+  },
+  {
+    "packageName": "com.huawei.systemmanager",
+    "shortLabel": "一键优化",
+    "intents": {
+      "act": "com.huawei.systemmanager.intent.action.ONEKEY_OPTIMIZATION",
+      "cmp": {
+        "pkg": "com.huawei.systemmanager",
+        "cls": ".mainscreen.normal.DetectResultActivity"
+      },
+      "flg": "0x8000"
+    }
+  },
+  {
+    "packageName": "com.huawei.browser",
+    "shortLabel": "下载管理",
+    "intents": {
+      "act": "com.huawei.browser.view.download",
+      "cmp": {
+        "pkg": "com.huawei.browser",
+        "cls": ".LauncherShortcutActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.huawei.browser",
+    "shortLabel": "搜索",
+    "intents": {
+      "act": "com.huawei.browser.view.search",
+      "cmp": {
+        "pkg": "com.huawei.browser",
+        "cls": ".LauncherShortcutActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.huawei.browser",
+    "shortLabel": "书签/历史",
+    "intents": {
+      "act": "com.huawei.browser.view.history",
+      "cmp": {
+        "pkg": "com.huawei.browser",
+        "cls": ".LauncherShortcutActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.xunmeng.pinduoduo",
+    "shortLabel": "免费拿",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "pinduoduo://com.xunmeng.pinduoduo/mkt_bargain_list.html?bargain_from=personal&refer_page_sn=10441&refer_page_el_sn=535591",
+      "flg": "0x1000c000",
+      "pb": {
+        "caller": "shortcut",
+        "refer_page_el_sn": "535591",
+        "refer_page_sn": "10441"
+      }
+    }
+  },
+  {
+    "packageName": "com.xunmeng.pinduoduo",
+    "shortLabel": "领现金",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "pinduoduo://com.xunmeng.pinduoduo/aug_daily999.html?_ex_campaign=signin&refer_page_sn=10441&refer_page_el_sn=535590&_pdd_fs=1",
+      "flg": "0x1000c000",
+      "pb": {
+        "caller": "shortcut",
+        "refer_page_el_sn": "535590",
+        "refer_page_sn": "10441"
+      }
+    }
+  },
+  {
+    "packageName": "com.xunmeng.pinduoduo",
+    "shortLabel": "聊天消息",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "pinduoduo://com.xunmeng.pinduoduo/index.html?type=pdd_home&index=3&refer_page_sn=10441&refer_page_el_sn=535593",
+      "flg": "0x1000c000",
+      "pb": {
+        "caller": "shortcut",
+        "refer_page_el_sn": "535593",
+        "refer_page_sn": "10441"
+      }
+    }
+  },
+  {
+    "packageName": "com.xunmeng.pinduoduo",
+    "shortLabel": "查订单",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "pinduoduo://com.xunmeng.pinduoduo/orders.html?type=1&refer_page_sn=10441&refer_page_el_sn=535592",
+      "flg": "0x1000c000",
+      "pb": {
+        "caller": "shortcut",
+        "refer_page_el_sn": "535592",
+        "refer_page_sn": "10441"
+      }
+    }
+  },
+  {
+    "packageName": "com.ss.android.article.news",
+    "shortLabel": "头条搜索",
+    "intents": {
+      "act": "android.intent.action.SEND",
+      "dat": "sslocal://search?from=search_short_cut",
+      "cmp": {
+        "pkg": "com.ss.android.article.news",
+        "cls": "com.ss.android.article.base.feature.search.SearchActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.example.android.notepad",
+    "shortLabel": "待办",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.example.android.notepad",
+        "cls": ".NotePadActivity"
+      }
+    }
+  },
+  {
+    "packageName": "com.example.android.notepad",
+    "shortLabel": "文字笔记",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.example.android.notepad",
+        "cls": ".NotePadActivity"
+      }
+    }
+  },
+  {
+    "packageName": "com.example.android.notepad",
+    "shortLabel": "语音速记",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.example.android.notepad",
+        "cls": ".NotePadActivity"
+      }
+    }
+  },
+  {
+    "packageName": "com.example.android.notepad",
+    "shortLabel": "拍照",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.example.android.notepad",
+        "cls": ".NotePadActivity"
+      }
+    }
+  },
+  {
+    "packageName": "mark.via",
+    "shortLabel": "搜索",
+    "intents": {
+      "act": "mark.via.SEARCH",
+      "cmp": {
+        "pkg": "mark.via",
+        "cls": ".ui.activity.BrowserActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "mark.via",
+    "shortLabel": "历史",
+    "intents": {
+      "act": "mark.via.HISTORY",
+      "cmp": {
+        "pkg": "mark.via",
+        "cls": ".ui.activity.BrowserActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "mark.via",
+    "shortLabel": "书签",
+    "intents": {
+      "act": "mark.via.BOOKMARK",
+      "cmp": {
+        "pkg": "mark.via",
+        "cls": ".ui.activity.BrowserActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.android.chrome",
+    "shortLabel": "metis-im",
+    "intents": {
+      "act": "com.google.android.apps.chrome.webapps.WebappManager.ACTION_START_WEBAPP"
+    }
+  },
+  {
+    "packageName": "com.android.chrome",
+    "shortLabel": "Muse-UI",
+    "intents": {
+      "act": "com.google.android.apps.chrome.webapps.WebappManager.ACTION_START_WEBAPP"
+    }
+  },
+  {
+    "packageName": "com.android.chrome",
+    "shortLabel": "打开新的标签页",
+    "intents": {
+      "act": "chromium.shortcut.action.OPEN_NEW_TAB",
+      "cmp": {
+        "pkg": "com.android.chrome",
+        "cls": "org.chromium.chrome.browser.LauncherShortcutActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.android.chrome",
+    "shortLabel": "有道首页",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "https://m.youdao.com/...",
+      "pb": {
+        "org.chromium.chrome.browser.webapp_source": "8",
+        "org.chromium.chrome.browser.webapp_id": "b02c689b-d5f3-4ab8-97bd-02b4e5cd7739",
+        "REUSE_URL_MATCHING_TAB_ELSE_NEW_TAB": "true"
+      }
+    }
+  },
+  {
+    "packageName": "com.android.chrome",
+    "shortLabel": "godocs",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "https://docs.studygolang.com/...",
+      "pb": {
+        "org.chromium.chrome.browser.webapp_source": "8",
+        "org.chromium.chrome.browser.webapp_id": "a00d82bc-0ad9-49b8-bf47-16782e460d57",
+        "REUSE_URL_MATCHING_TAB_ELSE_NEW_TAB": "true"
+      }
+    }
+  },
+  {
+    "packageName": "com.android.chrome",
+    "shortLabel": "隐身标签页",
+    "intents": {
+      "act": "chromium.shortcut.action.OPEN_NEW_INCOGNITO_TAB",
+      "cmp": {
+        "pkg": "com.android.chrome",
+        "cls": "org.chromium.chrome.browser.LauncherShortcutActivity"
+      }
+    }
+  },
+  {
+    "packageName": "com.android.chrome",
+    "shortLabel": "rust-rfcs",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "https://github.com/...",
+      "pb": {
+        "org.chromium.chrome.browser.webapp_source": "8",
+        "org.chromium.chrome.browser.webapp_id": "2a321abf-7b66-4703-89e2-ef0a95c50bd5",
+        "REUSE_URL_MATCHING_TAB_ELSE_NEW_TAB": "true"
+      }
+    }
+  },
+  {
+    "packageName": "com.android.chrome",
+    "shortLabel": "mio",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "https://github.com/...",
+      "pb": {
+        "org.chromium.chrome.browser.webapp_source": "8",
+        "org.chromium.chrome.browser.webapp_id": "8da02eff-a705-40f7-809a-a0d1c1c4c4e1",
+        "REUSE_URL_MATCHING_TAB_ELSE_NEW_TAB": "true"
+      }
+    }
+  },
+  {
+    "packageName": "com.android.chrome",
+    "shortLabel": "metis-web",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "https://metis.dilu.com/...",
+      "pb": {
+        "org.chromium.chrome.browser.webapp_source": "8",
+        "org.chromium.chrome.browser.webapp_id": "6c9ec06e-1859-4b56-a9be-c77f0ce6b195",
+        "REUSE_URL_MATCHING_TAB_ELSE_NEW_TAB": "true"
+      }
+    }
+  },
+  {
+    "packageName": "com.android.chrome",
+    "shortLabel": "Folly",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "https://gitee.com/...",
+      "pb": {
+        "org.chromium.chrome.browser.webapp_source": "8",
+        "org.chromium.chrome.browser.webapp_id": "cb4b29ac-2d27-4bf3-87d4-69fa5c5904c5",
+        "REUSE_URL_MATCHING_TAB_ELSE_NEW_TAB": "true"
+      }
+    }
+  },
+  {
+    "packageName": "com.android.chrome",
+    "shortLabel": "dilu ops",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "http://ops.dilu.com/...",
+      "pb": {
+        "org.chromium.chrome.browser.webapp_source": "8",
+        "org.chromium.chrome.browser.webapp_id": "d59f03e1-f2bd-4acb-bd41-3d65e7f46025",
+        "REUSE_URL_MATCHING_TAB_ELSE_NEW_TAB": "true"
+      }
+    }
+  },
+  {
+    "packageName": "com.xiaomi.shop",
+    "shortLabel": "新人有礼",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "http://m.mi.com/..."
+    }
+  },
+  {
+    "packageName": "com.xiaomi.shop",
+    "shortLabel": "购物车",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "http://m.mi.com/..."
+    }
+  },
+  {
+    "packageName": "com.xiaomi.shop",
+    "shortLabel": "我的订单",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "http://m.mi.com/..."
+    }
+  },
+  {
+    "packageName": "com.xiaomi.shop",
+    "shortLabel": "搜索",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "http://m.mi.com/..."
+    }
+  },
+  {
+    "packageName": "com.android.gallery3d",
+    "shortLabel": "我的收藏",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.android.gallery3d",
+        "cls": "com.huawei.gallery.app.ShortCutGalleryMain"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.android.gallery3d",
+    "shortLabel": "最新照片",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.android.gallery3d",
+        "cls": "com.huawei.gallery.app.ShortCutGalleryMain"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.android.gallery3d",
+    "shortLabel": "搜索",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.android.gallery3d",
+        "cls": "com.huawei.gallery.app.ShortCutGalleryMain"
+      },
+      "flg": "0x10008000"
+    }
+  },
+  {
+    "packageName": "com.android.gallery3d",
+    "shortLabel": "发现",
+    "intents": {
+      "act": "hwgallery.intent.action.GET_PHOTOSHARE_CONTENT",
+      "cmp": {
+        "pkg": "com.android.gallery3d",
+        "cls": "com.huawei.gallery.app.ShortCutGalleryMain"
+      },
+      "flg": "0x10008000"
+    }
+  },
+  {
+    "packageName": "com.huawei.hwireader",
+    "shortLabel": "推荐书籍",
+    "intents": {
+      "act": "com.huawei.hwireader.shortcut.action.recommendbook",
+      "cmp": {
+        "pkg": "com.huawei.hwireader",
+        "cls": "com.chaozh.iReader.ui.activity.WelcomeActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.huawei.hwireader",
+    "shortLabel": "继续阅读",
+    "intents": {
+      "act": "com.huawei.hwireader.shortcut.action.continue.read",
+      "cmp": {
+        "pkg": "com.huawei.hwireader",
+        "cls": "com.chaozh.iReader.ui.activity.WelcomeActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.huawei.hwireader",
+    "shortLabel": "搜书",
+    "intents": {
+      "act": "com.huawei.hwireader.shortcut.action.continue.searchbook",
+      "cmp": {
+        "pkg": "com.huawei.hwireader",
+        "cls": "com.chaozh.iReader.ui.activity.WelcomeActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.huawei.hwireader",
+    "shortLabel": "今日签到",
+    "intents": {
+      "act": "com.huawei.hwireader.shortcut.action.sign",
+      "cmp": {
+        "pkg": "com.huawei.hwireader",
+        "cls": "com.chaozh.iReader.ui.activity.WelcomeActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.huawei.himovie",
+    "shortLabel": "我的缓存",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "himovie://com.huawei.himovie/showdown?from=com.huawei.android.launcher&needback=1",
+      "flg": "0x8000"
+    }
+  },
+  {
+    "packageName": "com.huawei.himovie",
+    "shortLabel": "搜索",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "himovie://com.huawei.himovie/showsearch?from=com.huawei.android.launcher&needback=1",
+      "flg": "0x8000"
+    }
+  },
+  {
+    "packageName": "com.huawei.himovie",
+    "shortLabel": "鼠胆英雄",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "himovie://com.huawei.himovie/showextvod?vodid=mgtvyr3dya.M.71c5b1086883ae58&from=com.huawei.android.launcher&needback=1",
+      "flg": "0x8000"
+    }
+  },
+  {
+    "packageName": "com.huawei.himovie",
+    "shortLabel": "我的收藏",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "himovie://com.huawei.himovie/showcollect?from=com.huawei.android.launcher&needback=1",
+      "flg": "0x8000"
+    }
+  },
+  {
+    "packageName": "com.ximalaya.ting.android",
+    "shortLabel": "播放历史",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "dat": "shortcut://playrecord",
+      "cmp": {
+        "pkg": "com.ximalaya.ting.android",
+        "cls": ".host.activity.MainActivity"
+      }
+    }
+  },
+  {
+    "packageName": "com.ximalaya.ting.android",
+    "shortLabel": "一键听电台",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "dat": "shortcut://daily",
+      "cmp": {
+        "pkg": "com.ximalaya.ting.android",
+        "cls": ".host.activity.MainActivity"
+      }
+    }
+  },
+  {
+    "packageName": "com.ximalaya.ting.android",
+    "shortLabel": "我的订阅",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "dat": "shortcut://subscribe",
+      "cmp": {
+        "pkg": "com.ximalaya.ting.android",
+        "cls": ".host.activity.MainActivity"
+      }
+    }
+  },
+  {
+    "packageName": "com.ximalaya.ting.android",
+    "shortLabel": "查看下载",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "dat": "shortcut://download",
+      "cmp": {
+        "pkg": "com.ximalaya.ting.android",
+        "cls": ".host.activity.MainActivity"
+      }
+    }
+  },
+  {
+    "packageName": "com.thirtydegreesray.openhub",
+    "shortLabel": "搜索",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "search",
+      "cmp": {
+        "pkg": "com.thirtydegreesray.openhub",
+        "cls": ".ui.activity.BrowserFilterActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.thirtydegreesray.openhub",
+    "shortLabel": "趋势",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "trending",
+      "cmp": {
+        "pkg": "com.thirtydegreesray.openhub",
+        "cls": ".ui.activity.BrowserFilterActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.android.settings",
+    "shortLabel": "蓝牙",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.android.settings",
+        "cls": ".Settings$BluetoothSettingsActivity"
+      },
+      "flg": "0x800000"
+    }
+  },
+  {
+    "packageName": "com.android.settings",
+    "shortLabel": "WLAN",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.android.settings",
+        "cls": ".Settings$WifiSettingsActivity"
+      },
+      "flg": "0x800000"
+    }
+  },
+  {
+    "packageName": "com.android.settings",
+    "shortLabel": "热点",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.android.settings",
+        "cls": ".Settings$WifiApSettingsActivity"
+      },
+      "flg": "0x800000",
+      "pb": {
+        ":settings:show_fragment_title_resid": "2131892153"
+      }
+    }
+  },
+  {
+    "packageName": "com.android.settings",
+    "shortLabel": "移动数据",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.android.phone",
+        "cls": ".MobileNetworkSettings"
+      },
+      "flg": "0x800000"
+    }
+  },
+  {
+    "packageName": "com.vmall.client",
+    "shortLabel": "我的订单",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.vmall.client",
+        "cls": ".base.fragment.VmallWapActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.vmall.client",
+    "shortLabel": "购物车",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.vmall.client",
+        "cls": ".base.fragment.VmallWapActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.vmall.client",
+    "shortLabel": "新人有礼",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.vmall.client",
+        "cls": ".base.fragment.VmallWapActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.vmall.client",
+    "shortLabel": "会员频道",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.vmall.client",
+        "cls": ".base.fragment.VmallWapActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.termux",
+    "shortLabel": "Failsafe",
+    "intents": {
+      "act": "android.intent.action.RUN",
+      "cmp": {
+        "pkg": "com.termux",
+        "cls": ".app.TermuxActivity"
+      },
+      "flg": "0x1000c000",
+      "pb": {
+        "com.termux.app.failsafe_session": "true"
+      }
+    }
+  },
+  {
+    "packageName": "com.termux",
+    "shortLabel": "New session",
+    "intents": {
+      "act": "android.intent.action.RUN",
+      "cmp": {
+        "pkg": "com.termux",
+        "cls": ".app.TermuxActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.autonavi.minimap",
+    "shortLabel": "回家",
+    "intents": {
+      "act": "com.autonavi.minimap.ACTION",
+      "dat": "amapuri://commute?clearStack=1&dest=home&shortcutLabel=回家",
+      "cmp": {
+        "pkg": "com.autonavi.minimap",
+        "cls": "com.autonavi.map.activity.NewMapActivity"
+      },
+      "flg": "0x10000000",
+      "pb": {
+        "shortcut_data_url": "amapuri://commute?clearStack=1&dest=home",
+        "shortcut_icon_load_success": "true",
+        "shortcut_data_sign": "sci_go_home回家回家amapuri://commute?clearStack=1&dest=home0http://mapdownload.autonavi.com/aocs/files/3/1/24B502228BB0C8A584523125D8408EE4.png",
+        "shortcut_icon_url": "http://mapdownload.autonavi.com/aocs/files/3/1/24B502228BB0C8A584523125D8408EE4.png"
+      }
+    }
+  },
+  {
+    "packageName": "com.autonavi.minimap",
+    "shortLabel": "从这里出发",
+    "intents": {
+      "act": "com.autonavi.minimap.ACTION",
+      "dat": "amapuri://route/plan?shortcutLabel=从这里出发",
+      "cmp": {
+        "pkg": "com.autonavi.minimap",
+        "cls": "com.autonavi.map.activity.NewMapActivity"
+      },
+      "flg": "0x10000000",
+      "pb": {
+        "shortcut_data_url": "amapuri://route/plan",
+        "shortcut_icon_load_success": "true",
+        "shortcut_data_sign": "sci_from_here从这里出发从这里出发amapuri://route/plan2http://mapdownload.autonavi.com/aocs/files/3/1/E0EE9E1F8F37FA1FED71C77B5A4F319D.png",
+        "shortcut_icon_url": "http://mapdownload.autonavi.com/aocs/files/3/1/E0EE9E1F8F37FA1FED71C77B5A4F319D.png"
+      }
+    }
+  },
+  {
+    "packageName": "com.autonavi.minimap",
+    "shortLabel": "去公司",
+    "intents": {
+      "act": "com.autonavi.minimap.ACTION",
+      "dat": "amapuri://commute?clearStack=1&dest=corp&shortcutLabel=去公司",
+      "cmp": {
+        "pkg": "com.autonavi.minimap",
+        "cls": "com.autonavi.map.activity.NewMapActivity"
+      },
+      "flg": "0x10000000",
+      "pb": {
+        "shortcut_data_url": "amapuri://commute?clearStack=1&dest=corp",
+        "shortcut_icon_load_success": "true",
+        "shortcut_data_sign": "sci_go_to_company去公司去公司amapuri://commute?clearStack=1&dest=corp1http://mapdownload.autonavi.com/aocs/files/3/1/E71F54FD0516CC2CBF841AA3B71266D5.png",
+        "shortcut_icon_url": "http://mapdownload.autonavi.com/aocs/files/3/1/E71F54FD0516CC2CBF841AA3B71266D5.png"
+      }
+    }
+  },
+  {
+    "packageName": "ctrip.android.view",
+    "shortLabel": "预订机票",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "ctrip://flightSearch/",
+      "cmp": {
+        "pkg": "ctrip.android.view",
+        "cls": ".view.CtripBootActivity"
+      },
+      "pb": {
+        "shortcut_3d_touch": "true"
+      }
+    }
+  },
+  {
+    "packageName": "ctrip.android.view",
+    "shortLabel": "搜索",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "ctrip://searchSearch/",
+      "cmp": {
+        "pkg": "ctrip.android.view",
+        "cls": ".view.CtripBootActivity"
+      },
+      "pb": {
+        "shortcut_3d_touch": "true"
+      }
+    }
+  },
+  {
+    "packageName": "ctrip.android.view",
+    "shortLabel": "预订酒店",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "ctrip://hotelSearch/",
+      "cmp": {
+        "pkg": "ctrip.android.view",
+        "cls": ".view.CtripBootActivity"
+      },
+      "pb": {
+        "shortcut_3d_touch": "true"
+      }
+    }
+  },
+  {
+    "packageName": "ctrip.android.view",
+    "shortLabel": "预订火车票",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "ctrip://trainSearch/",
+      "cmp": {
+        "pkg": "ctrip.android.view",
+        "cls": ".view.CtripBootActivity"
+      },
+      "pb": {
+        "shortcut_3d_touch": "true"
+      }
+    }
+  },
+  {
+    "packageName": "com.android.email",
+    "shortLabel": "搜索邮件",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "search_shortcut",
+      "cmp": {
+        "pkg": "com.android.email",
+        "cls": "com.android.email2.ui.MailActivityEmail"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.android.email",
+    "shortLabel": "未读邮件",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "unread_shortcut",
+      "cmp": {
+        "pkg": "com.android.email",
+        "cls": "com.android.email2.ui.MailActivityEmail"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.android.email",
+    "shortLabel": "VIP 收件箱",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "vip_shortcut",
+      "cmp": {
+        "pkg": "com.android.email",
+        "cls": "com.android.email2.ui.MailActivityEmail"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.android.email",
+    "shortLabel": "新建邮件",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "compose_shortcut",
+      "cmp": {
+        "pkg": "com.android.email",
+        "cls": "com.android.email2.ui.MailActivityEmail"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.sina.weibo",
+    "shortLabel": "发微博",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.sina.weibo",
+        "cls": ".MainTabActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.sina.weibo",
+    "shortLabel": "热门微博",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.sina.weibo",
+        "cls": ".MainTabActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.sina.weibo",
+    "shortLabel": "扫一扫",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.sina.weibo",
+        "cls": ".MainTabActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.android.deskclock",
+    "shortLabel": "暂停倒计时",
+    "intents": {
+      "act": "com.huawei.intent.action.pause",
+      "cmp": {
+        "pkg": "com.android.deskclock",
+        "cls": ".AlarmsMainActivity"
+      },
+      "flg": "0x10000000",
+      "pb": {
+        "deskclock.select.tab": "3",
+        "is_quickaction_type": "true",
+        "quickaction_type_state": "2",
+        "quickaction_type": "2"
+      }
+    }
+  },
+  {
+    "packageName": "com.android.deskclock",
+    "shortLabel": "新建闹钟",
+    "intents": {
+      "act": "android.intent.action.MAIN",
+      "cmp": {
+        "pkg": "com.android.deskclock",
+        "cls": ".AlarmsMainActivity"
+      },
+      "flg": "0x1000c000"
+    }
+  },
+  {
+    "packageName": "com.android.deskclock",
+    "shortLabel": "开始秒表计时",
+    "intents": {
+      "act": "com.huawei.intent.action.start",
+      "cmp": {
+        "pkg": "com.android.deskclock",
+        "cls": ".AlarmsMainActivity"
+      },
+      "flg": "0x10000000",
+      "pb": {
+        "deskclock.select.tab": "2",
+        "is_quickaction_type": "true",
+        "quickaction_type": "1"
+      }
+    }
+  },
+  {
+    "packageName": "com.ss.android.article.video",
+    "shortLabel": "离线缓存",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "sslocal://offline",
+      "cmp": {
+        "pkg": "com.ss.android.article.video",
+        "cls": "com.ss.android.article.base.feature.app.schema.AdsAppActivity"
+      },
+      "pb": {
+        "version": "2"
+      }
+    }
+  },
+  {
+    "packageName": "com.ss.android.article.video",
+    "shortLabel": "搜索",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "sslocal://search",
+      "cmp": {
+        "pkg": "com.ss.android.article.video",
+        "cls": "com.ss.android.article.base.feature.app.schema.AdsAppActivity"
+      },
+      "pb": {
+        "version": "2"
+      }
+    }
+  },
+  {
+    "packageName": "com.ss.android.article.video",
+    "shortLabel": "观看历史",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "sslocal://play_history",
+      "cmp": {
+        "pkg": "com.ss.android.article.video",
+        "cls": "com.ss.android.article.base.feature.app.schema.AdsAppActivity"
+      },
+      "pb": {
+        "version": "2"
+      }
+    }
+  },
+  {
+    "packageName": "com.netease.cloudmusic",
+    "shortLabel": "听歌识曲",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "cmp": {
+        "pkg": "com.netease.cloudmusic",
+        "cls": ".activity.RedirectActivity"
+      },
+      "flg": "0x1000c000",
+      "pb": {
+        "shortcutType": "1"
+      }
+    }
+  },
+  {
+    "packageName": "com.netease.cloudmusic",
+    "shortLabel": "搜索",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "cmp": {
+        "pkg": "com.netease.cloudmusic",
+        "cls": ".activity.RedirectActivity"
+      },
+      "flg": "0x1000c000",
+      "pb": {
+        "shortcutType": "3"
+      }
+    }
+  },
+  {
+    "packageName": "com.netease.cloudmusic",
+    "shortLabel": "私人FM",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "cmp": {
+        "pkg": "com.netease.cloudmusic",
+        "cls": ".activity.RedirectActivity"
+      },
+      "flg": "0x1000c000",
+      "pb": {
+        "shortcutType": "2"
+      }
+    }
+  },
+  {
+    "packageName": "com.netease.cloudmusic",
+    "shortLabel": "播放本地音乐",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "cmp": {
+        "pkg": "com.netease.cloudmusic",
+        "cls": ".activity.RedirectActivity"
+      },
+      "flg": "0x1000c000",
+      "pb": {
+        "shortcutType": "4"
+      }
+    }
+  },
+  {
+    "packageName": "tv.danmaku.bili",
+    "shortLabel": "搜索",
+    "intents": {
+      "act": "tv.danmaku.bili.action.SHORT_CUT",
+      "dat": "bilibili://search",
+      "cmp": {
+        "pkg": "tv.danmaku.bili",
+        "cls": ".ui.intent.IntentHandlerActivity"
+      }
+    }
+  },
+  {
+    "packageName": "tv.danmaku.bili",
+    "shortLabel": "离线视频",
+    "intents": {
+      "act": "tv.danmaku.bili.action.SHORT_CUT",
+      "dat": "activity://main/download-list",
+      "cmp": {
+        "pkg": "tv.danmaku.bili",
+        "cls": ".ui.intent.IntentHandlerActivity"
+      }
+    }
+  },
+  {
+    "packageName": "com.eg.android.AlipayGphone",
+    "shortLabel": "付款码",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "alipayss://platformapi/startapp?appId=20000056&source=shortcut",
+      "cmp": {
+        "pkg": "com.eg.android.AlipayGphone",
+        "cls": ".FastStartActivity"
+      },
+      "cat": "android.intent.category.DEFAULT] dat=alipayss://platformapi/startapp?appId=20000056&source=shortcut flg=0x14000000 cmp=com.eg.android.AlipayGphone/.FastStartActivity }/PersistableBundle[{directly=true, fromDesktop=true}]",
+      "flg": "0x14000000",
+      "pb": {
+        "directly": "true",
+        "fromDesktop": "true"
+      }
+    }
+  },
+  {
+    "packageName": "com.eg.android.AlipayGphone",
+    "shortLabel": "江苏政务服务",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "dat": "alipaylite://platformapi/startapp?appId=2018062060350751&customParams=chInfo=app_desktop&ap_framework_sceneId=1023&chInfo=ch_desktop",
+      "cmp": {
+        "pkg": "com.eg.android.AlipayGphone",
+        "cls": "com.alipay.mobile.framework.service.common.SchemeStartActivity"
+      },
+      "cat": "android.intent.category.DEFAULT] dat=alipaylite://platformapi/startapp?appId=2018062060350751&customParams=chInfo=app_desktop&ap_framework_sceneId=1023&chInfo=ch_desktop flg=0x14000000 cmp=com.eg.android.AlipayGphone/com.alipay.mobile.framework.service.common.SchemeStartActivity }/PersistableBundle[{fromDesktop=true, SCHEME_FROM_LITE_PROCESS=true}]",
+      "flg": "0x14000000",
+      "pb": {
+        "fromDesktop": "true",
+        "SCHEME_FROM_LITE_PROCESS": "true"
+      }
+    }
+  },
+  {
+    "packageName": "com.eg.android.AlipayGphone",
+    "shortLabel": "更多设置",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "cmp": {
+        "pkg": "com.eg.android.AlipayGphone",
+        "cls": "com.alipay.android.phone.wallet.shortcuts.bridge.ShortcutsLauncherActivity"
+      },
+      "pb": {
+        "KEY_APP_ID": "20002027",
+        "KEY_SCHEME": "alipays://platformapi/startapp?appId=20002027&shortcut_scene=SHORTCUTS&source=nougat_shortcut"
+      }
+    }
+  },
+  {
+    "packageName": "com.eg.android.AlipayGphone",
+    "shortLabel": "扫一扫",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "cmp": {
+        "pkg": "com.eg.android.AlipayGphone",
+        "cls": "com.alipay.android.phone.wallet.shortcuts.bridge.ShortcutsLauncherActivity"
+      },
+      "pb": {
+        "KEY_APP_ID": "10000007",
+        "KEY_SCHEME": "alipays://platformapi/startapp?appId=10000007&source=nougat_shortcut&sourceId=nougat_shortcut_scan"
+      }
+    }
+  },
+  {
+    "packageName": "com.eg.android.AlipayGphone",
+    "shortLabel": "付钱",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "cmp": {
+        "pkg": "com.eg.android.AlipayGphone",
+        "cls": "com.alipay.android.phone.wallet.shortcuts.bridge.ShortcutsLauncherActivity"
+      },
+      "pb": {
+        "KEY_APP_ID": "20000056",
+        "KEY_SCHEME": "alipays://platformapi/startapp?appId=20000056&source=nougat_shortcut"
+      }
+    }
+  },
+  {
+    "packageName": "com.eg.android.AlipayGphone",
+    "shortLabel": "收钱",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "cmp": {
+        "pkg": "com.eg.android.AlipayGphone",
+        "cls": "com.alipay.android.phone.wallet.shortcuts.bridge.ShortcutsLauncherActivity"
+      },
+      "pb": {
+        "KEY_APP_ID": "20000123",
+        "KEY_SCHEME": "alipays://platformapi/startapp?appId=20000123&source=nougat_shortcut"
+      }
+    }
+  },
+  {
+    "packageName": "cn.wps.moffice_eng",
+    "shortLabel": "新建文档",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "cmp": {
+        "pkg": "cn.wps.moffice_eng",
+        "cls": "cn.wps.moffice.main.local.home.newfiles.template.ShortcutTemplateNewFileActivity"
+      },
+      "pb": {
+        "app": "1",
+        "openfrom_shortcuts": "doc_id"
+      }
+    }
+  },
+  {
+    "packageName": "cn.wps.moffice_eng",
+    "shortLabel": "搜索文档",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "cmp": {
+        "pkg": "cn.wps.moffice_eng",
+        "cls": "cn.wps.moffice.main.local.filebrowser.search.home.ShortcutSearchActivity"
+      },
+      "pb": {
+        "openfrom_shortcuts": "composite_search_id"
+      }
+    }
+  },
+  {
+    "packageName": "cn.wps.moffice_eng",
+    "shortLabel": "会议",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "cmp": {
+        "pkg": "cn.wps.moffice_eng",
+        "cls": "cn.wps.moffice.common.shareplay2.ShortcutSharePlayIndexActivity"
+      },
+      "pb": {
+        "public_share_play_mobile_net": "false",
+        "openfrom_shortcuts": "share_play_id"
+      }
+    }
+  },
+  {
+    "packageName": "cn.wps.moffice_eng",
+    "shortLabel": "拍照扫描",
+    "intents": {
+      "act": "android.intent.action.VIEW",
+      "cmp": {
+        "pkg": "cn.wps.moffice_eng",
+        "cls": "cn.wps.moffice.main.scan.ui.DocScanGroupListActivity"
+      },
+      "pb": {
+        "ACTIVITY_ALLDOC_FILE_TYPE": "3",
+        "openfrom_shortcuts": "scan_id"
+      }
+    }
+  }
+]
