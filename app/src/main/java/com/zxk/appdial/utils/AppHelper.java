@@ -12,6 +12,8 @@ import net.sourceforge.pinyin4j.PinyinHelper;
 import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
 import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
 import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
+
+import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -19,6 +21,7 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Bitmap.CompressFormat;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
@@ -116,65 +119,350 @@ public class AppHelper implements ThreadHelper.ThreadHeplerUser<PackageInfo> {
       apps.put(myAppInfo, new Object());
     }
 
-    // chuqq: 增加uri-scheme
-    HashMap<String, String> uriSchemeInfos = new HashMap<String, String>();
-    uriSchemeInfos.put("微信-扫一扫", "weixin://scanqrcode");
-    uriSchemeInfos.put("支付宝-扫一扫", "alipays://platformapi/startapp?appId=10000007&source=nougat_shortcut&sourceId=nougat_shortcut_scan");
-    uriSchemeInfos.put("支付宝-转账", "alipays://platformapi/startapp?appId=20000116");
-    uriSchemeInfos.put("支付宝-蚂蚁森林", "alipays://platformapi/startapp?appId=60000002");
-    uriSchemeInfos.put("支付宝-蚂蚁庄园", "alipays://platformapi/startapp?appId=66666674");
-    uriSchemeInfos.put("支付宝-收款", "alipays://platformapi/startapp?appId=20000123");
-    uriSchemeInfos.put("支付宝-付款", "alipays://platformapi/startapp?appId=20000056&source=nougat_shortcut");
-    uriSchemeInfos.put("支付宝-红包", "alipays://platformapi/startapp?appId=88886666");
-    uriSchemeInfos.put("支付宝-AA收款", "alipays://platformapi/startapp?appId=20000263");
-    uriSchemeInfos.put("支付宝-记账", "alipay://platformapi/startapp?appId=20000168");
-    uriSchemeInfos.put("支付宝-还信用卡", "alipays://platformapi/startapp?appId=09999999");
-    uriSchemeInfos.put("支付宝-滴滴出行", "alipays://platformapi/startapp?appId=20000778");
-    uriSchemeInfos.put("支付宝-查快递", "alipays://platformapi/startapp?appId=20000754");
-    uriSchemeInfos.put("支付宝-生活缴费", "alipays://platformapi/startapp?appId=20000193");
-    uriSchemeInfos.put("支付宝-彩票", "alipays://platformapi/startapp?appId=10000011");
-    uriSchemeInfos.put("支付宝-淘票票", "alipays://platformapi/startapp?appId=20000131");
-    uriSchemeInfos.put("支付宝-股票", "alipays://platformapi/startapp?appId=20000134");
-    uriSchemeInfos.put("支付宝-蚂蚁宝卡", "alipays://platformapi/startapp?appId=60000057");
-    uriSchemeInfos.put("QQ音乐-最近播放", "qqmusic://today?mid=31&k1=2&k4=0");
-    uriSchemeInfos.put("网易云音乐-听歌识曲", "orpheuswidget://recognize");
-    uriSchemeInfos.put("网易云音乐-私人FM", "orpheuswidget://radio");
-
-    uriSchemeInfos.put("QQ音乐-听歌识曲", "1111");
-
-
-    for (String name: uriSchemeInfos.keySet()) {
-      LocalApp myAppInfo = new LocalApp();
-      myAppInfo.setType("uri-scheme");
-      myAppInfo.setAppName(name);
-      myAppInfo.setPackageName(uriSchemeInfos.get(name));
-
-      myAppInfo.setPinyin(getPinyin(myAppInfo.getAppName(), ""));
-      myAppInfo.setCount(countHelper.getCount(myAppInfo.getPackageName()));
-      myAppInfo.setInCount(!countHelper.isUnCount(myAppInfo.getPackageName()));
-      // myAppInfo.setIcon(
-
-      apps.put(myAppInfo, new Object());
-    }
-
-    // chuqq: 根据dumpsys shortcut来启动
-    // chuqq: TODO 保存数据
+    // chuqq:
+//    {
+//      String name = "下载管理";
+//
+//      Intent intent = packageManager.getLaunchIntentForPackage("com.huawei.browser");
+//      intent.setAction("com.huawei.browser.view.download");
+//      intent.setComponent(new ComponentName("com.huawei.browser", "com.huawei.browser.Main2"));
+//
+//      LocalApp app = new LocalApp();
+//      app.setAppName(name);
+//      app.setIntent(intent);
+//
+//      addApp(app);
+//    }
     {
-      // 蛋塔秀Infi000的直播间
-      HashMap<String, String> shortcut = new HashMap<String, String>();
-      shortcut.put("packageName", "air.tv.douyu.android");
-      shortcut.put("shortLabel", "蛋塔秀Infi000的直播间");
-      shortcut.put("intents.act", "android.intent.action.VIEW");
-      shortcut.put("intents.cmp.pkg", "air.tv.douyu.android");
-      shortcut.put("intents.cmp.cls", "tv.douyu.view.activity.launcher.DYLauncherActivity");
+      String name = "微信扫一扫";
 
-      HashMap<String, String> extras = new HashMap<String, String>();
-      extras.put("roomId", "11017");
+      Intent intent = packageManager.getLaunchIntentForPackage("com.tencent.mm");
+      intent.putExtra("LauncherUI.From.Scaner.Shortcut", true);
 
-      addShortcut(shortcut, extras);
+      LocalApp app = new LocalApp();
+      app.setAppName(name);
+      app.setIntent(intent);
+
+      addApp(app);
+    }
+//    {
+//      String name = "微信车来了精准实时公交";
+//
+//      Intent intent = packageManager.getLaunchIntentForPackage("com.tencent.mm");
+//      intent.setAction("com.tencent.mm.action.WX_SHORTCUT");
+//      intent.putExtra("ext_info", "shortcut_2b6ac38ac282c2b7c39c0c605a5cc3992764c3be2d16c390c38e");
+//      intent.putExtra("digest", "61f1c6b4dbe1711e64ec02d0fa0e0222");
+//      intent.putExtra("id", "shortcut_3b7ac2a2c280c3a6c28b506b0909c28c703fc2a32865c283c28f26");
+//      intent.putExtra("type", "1");
+//      intent.putExtra("token", "21ac2bcac55414ff4906aa31ed3857a2");
+//      intent.putExtra("ext_info_1", "0");
+//
+//      LocalApp app = new LocalApp();
+//      app.setAppName(name);
+//      app.setIntent(intent);
+//
+//      addApp(app);
+//    }
+    {
+      String name = "支付宝扫一扫";
+      String uri = "alipays://platformapi/startapp?appId=10000007&source=nougat_shortcut&sourceId=nougat_shortcut_scan";
+
+      Intent intent = new Intent();
+      intent.setAction("android.intent.action.VIEW");
+      intent.setData(Uri.parse(uri));
+
+      LocalApp app = new LocalApp();
+      app.setAppName(name);
+      app.setIntent(intent);
+
+      addApp(app);
+    }
+    {
+      String name = "支付宝转账";
+      String uri = "alipays://platformapi/startapp?appId=20000116";
+
+      Intent intent = new Intent();
+      intent.setAction("android.intent.action.VIEW");
+      intent.setData(Uri.parse(uri));
+
+      LocalApp app = new LocalApp();
+      app.setAppName(name);
+      app.setIntent(intent);
+
+      addApp(app);
+    }
+    {
+      String name = "支付宝蚂蚁森林";
+      String uri = "alipays://platformapi/startapp?appId=60000002";
+
+      Intent intent = new Intent();
+      intent.setAction("android.intent.action.VIEW");
+      intent.setData(Uri.parse(uri));
+
+      LocalApp app = new LocalApp();
+      app.setAppName(name);
+      app.setIntent(intent);
+
+      addApp(app);
+    }
+    {
+      String name = "支付宝蚂蚁庄园";
+      String uri = "alipays://platformapi/startapp?appId=66666674";
+
+      Intent intent = new Intent();
+      intent.setAction("android.intent.action.VIEW");
+      intent.setData(Uri.parse(uri));
+
+      LocalApp app = new LocalApp();
+      app.setAppName(name);
+      app.setIntent(intent);
+
+      addApp(app);
+    }
+    {
+      String name = "支付宝付钱";
+      String uri = "alipayss://platformapi/startapp?appId=20000056&source=shortcut";
+
+      Intent intent = new Intent();
+      intent.setAction("android.intent.action.VIEW");
+      intent.setData(Uri.parse(uri));
+
+      LocalApp app = new LocalApp();
+      app.setAppName(name);
+      app.setIntent(intent);
+
+      addApp(app);
+    }
+    {
+      String name = "支付宝收钱";
+      String uri = "alipays://platformapi/startapp?appId=20000123";
+
+      Intent intent = new Intent();
+      intent.setAction("android.intent.action.VIEW");
+      intent.setData(Uri.parse(uri));
+
+      LocalApp app = new LocalApp();
+      app.setAppName(name);
+      app.setIntent(intent);
+
+      addApp(app);
+    }
+    {
+      String name = "支付宝红包";
+      String uri = "alipays://platformapi/startapp?appId=88886666";
+
+      Intent intent = new Intent();
+      intent.setAction("android.intent.action.VIEW");
+      intent.setData(Uri.parse(uri));
+
+      LocalApp app = new LocalApp();
+      app.setAppName(name);
+      app.setIntent(intent);
+
+      addApp(app);
+    }
+//    {
+//      String name = "支付宝AA收款";
+//      String uri = "alipays://platformapi/startapp?appId=20000263";
+//
+//      Intent intent = new Intent();
+//      intent.setAction("android.intent.action.VIEW");
+//      intent.setData(Uri.parse(uri));
+//
+//      LocalApp app = new LocalApp();
+//      app.setAppName(name);
+//      app.setIntent(intent);
+//
+//      addApp(app);
+//    }
+//    {
+//      String name = "支付宝记账";
+//      String uri = "alipay://platformapi/startapp?appId=20000168";
+//
+//      Intent intent = new Intent();
+//      intent.setAction("android.intent.action.VIEW");
+//      intent.setData(Uri.parse(uri));
+//
+//      LocalApp app = new LocalApp();
+//      app.setAppName(name);
+//      app.setIntent(intent);
+//
+//      addApp(app);
+//    }
+
+//    uriSchemeInfos.put("支付宝-还信用卡", "alipays://platformapi/startapp?appId=09999999");
+//    uriSchemeInfos.put("支付宝-滴滴出行", "alipays://platformapi/startapp?appId=20000778");
+//    uriSchemeInfos.put("支付宝-查快递", "alipays://platformapi/startapp?appId=20000754");
+//    uriSchemeInfos.put("支付宝-生活缴费", "alipays://platformapi/startapp?appId=20000193");
+//    uriSchemeInfos.put("支付宝-彩票", "alipays://platformapi/startapp?appId=10000011");
+//    uriSchemeInfos.put("支付宝-淘票票", "alipays://platformapi/startapp?appId=20000131");
+//    uriSchemeInfos.put("支付宝-股票", "alipays://platformapi/startapp?appId=20000134");
+//    uriSchemeInfos.put("支付宝-蚂蚁宝卡", "alipays://platformapi/startapp?appId=60000057");
+    {
+      String name = "QQ音乐听歌识曲";
+      Intent intent = new Intent();
+      intent.setAction("android.intent.action.VIEW");
+      intent.setComponent(new ComponentName("com.tencent.qqmusic", "com.tencent.qqmusic.third.DispacherActivityForThird"));
+      intent.putExtra("shortcutScheme", "recognize");
+
+      LocalApp app = new LocalApp();
+      app.setAppName(name);
+      app.setIntent(intent);
+
+      addApp(app);
+    }
+    {
+      String name = "QQ音乐最近播放";
+      Intent intent = new Intent();
+      intent.setAction("android.intent.action.VIEW");
+      intent.setComponent(new ComponentName("com.tencent.qqmusic", "com.tencent.qqmusic.third.DispacherActivityForThird"));
+      intent.putExtra("shortcutScheme", "playRecent");
+
+      LocalApp app = new LocalApp();
+      app.setAppName(name);
+      app.setIntent(intent);
+
+      addApp(app);
+    }
+    {
+      String name = "QQ音乐搜索歌曲";
+      Intent intent = new Intent();
+      intent.setAction("android.intent.action.VIEW");
+      intent.setComponent(new ComponentName("com.tencent.qqmusic", "com.tencent.qqmusic.third.DispacherActivityForThird"));
+      intent.putExtra("shortcutScheme", "searchSong");
+
+      LocalApp app = new LocalApp();
+      app.setAppName(name);
+      app.setIntent(intent);
+
+      addApp(app);
+    }
+    {
+      String name = "网易云音乐听歌识曲";
+
+      Intent intent = new Intent();
+      intent.setAction("android.intent.action.VIEW");
+      intent.setComponent(new ComponentName("com.netease.cloudmusic", "com.netease.cloudmusic.activity.RedirectActivity"));
+      intent.putExtra("shortcutType", 1);
+
+      LocalApp app = new LocalApp();
+      app.setAppName(name);
+      app.setIntent(intent);
+
+      addApp(app);
+    }
+    {
+      String name = "网易云音乐私人FM";
+
+      Intent intent = new Intent();
+      intent.setAction("android.intent.action.VIEW");
+      intent.setComponent(new ComponentName("com.netease.cloudmusic", "com.netease.cloudmusic.activity.RedirectActivity"));
+      intent.putExtra("shortcutType", 2);
+
+      LocalApp app = new LocalApp();
+      app.setAppName(name);
+      app.setIntent(intent);
+
+      addApp(app);
+    }
+//    {
+//      String name = "斗鱼蛋塔秀Infi000的直播间";
+//
+//      Intent intent = new Intent();
+//      intent.setAction("android.intent.action.VIEW");
+//      intent.setComponent(new ComponentName("air.tv.douyu.android", "tv.douyu.view.activity.launcher.DYLauncherActivity"));
+//      intent.putExtra("roomId", "11017");
+//
+//      LocalApp app = new LocalApp();
+//      app.setAppName(name);
+//      app.setIntent(intent);
+//
+//      addApp(app);
+//    }
+    {
+      String name = "华为应用市场搜索";
+
+      Intent intent = new Intent();
+      intent.setAction("com.huawei.appmarket.appmarket.intent.action.SearchActivity");
+      intent.setComponent(new ComponentName("com.huawei.appmarket", "com.huawei.appmarket.service.externalapi.view.ThirdApiActivity"));
+
+      LocalApp app = new LocalApp();
+      app.setAppName(name);
+      app.setIntent(intent);
+
+      addApp(app);
+    }
+//    {
+//      String name = "汽车之家极速版";
+//
+//      Intent intent = new Intent();
+//      intent.setAction("android.intent.action.MAIN");
+//      intent.setComponent(new ComponentName("com.huawei.fastapp", "ccom.huawei.fastapp.app.processManager.RpkLoaderActivityEntry"));
+//      intent.putExtra("rpk_load_hash", "7bc733da78c8da96f8865cb65639e790ddf0b985a9d21b3caaef8f42097d9ba8");
+//      intent.putExtra("rpk_load_path", "http://appdlc.hicloud.com/dl/appdl/application/apk/a4/a47482325619436ab01cadf9190688cb/com.autohome.quickapp.1909261849.rpk?source=rpk&maple=0&trackId=0&distOpEntity=HWSW");
+//      String type = null;
+//      intent.putExtra("rpk_load_type", type);
+//      intent.putExtra("rpk_load_app_id", "C100241877");
+//      intent.putExtra("rpk_load_source", "shortcut_api|fastappList_other");
+//      intent.putExtra("rpk_load_package", "com.autohome.quickapp");
+//
+//      LocalApp app = new LocalApp();
+//      app.setAppName(name);
+//      app.setIntent(intent);
+//
+//      addApp(app);
+//    }
+    {
+      String name = "高德地图回家";
+      String uri = "amapuri://commute?clearStack=1&dest=home&shortcutLabel=回家";
+
+      Intent intent = new Intent();
+      intent.setAction("android.intent.action.VIEW");
+      intent.setData(Uri.parse(uri));
+
+      LocalApp app = new LocalApp();
+      app.setAppName(name);
+      app.setIntent(intent);
+
+      addApp(app);
+    }
+    {
+      String name = "高德地图从这里出发";
+      String uri = "amapuri://route/plan?shortcutLabel=从这里出发";
+
+      Intent intent = new Intent();
+      intent.setAction("android.intent.action.VIEW");
+      intent.setData(Uri.parse(uri));
+
+      LocalApp app = new LocalApp();
+      app.setAppName(name);
+      app.setIntent(intent);
+
+      addApp(app);
+    }
+    {
+      String name = "高德地图从这里出发";
+      String uri = "amapuri://commute?clearStack=1&dest=corp&shortcutLabel=去公司";
+
+      Intent intent = new Intent();
+      intent.setAction("android.intent.action.VIEW");
+      intent.setData(Uri.parse(uri));
+
+      LocalApp app = new LocalApp();
+      app.setAppName(name);
+      app.setIntent(intent);
+
+      addApp(app);
     }
 
     Log.d(AppHelper.class.getName(), Thread.currentThread().getName() + "结束");
+  }
+
+  private void addApp(LocalApp app) {
+    app.setPinyin(getPinyin(app.getAppName(), ""));
+    app.setCount(countHelper.getCount(app.getPackageName()));
+    app.setInCount(!countHelper.isUnCount(app.getPackageName()));
+    apps.put(app, new Object());
   }
 
   private void addShortcut(HashMap<String, String> shortcut, HashMap<String, String> extras) {

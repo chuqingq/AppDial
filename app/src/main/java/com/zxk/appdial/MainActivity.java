@@ -1,16 +1,12 @@
 package com.zxk.appdial;
 
-import java.net.URI;
 import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Map;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -43,8 +39,6 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.google.firebase.analytics.FirebaseAnalytics;
-import com.google.firebase.components.Component;
 import com.t9search.model.PinyinSearchUnit;
 import com.t9search.util.PinyinUtil;
 import com.t9search.util.T9Util;
@@ -63,7 +57,7 @@ public class MainActivity extends Activity implements ThreadHelper.ThreadHeplerU
   private AppHelper appHelper;
   private CountHelper countHelper;
 
-  private FirebaseAnalytics firebaseAnalytics;
+//  private FirebaseAnalytics firebaseAnalytics;
   private ShortcutManager shortcutManager = null;
   public static final int coutPerThread = 50;
 
@@ -86,14 +80,13 @@ public class MainActivity extends Activity implements ThreadHelper.ThreadHeplerU
         "启动结束: " + (System.currentTimeMillis() - start), coutPerThread));
   }
 
-  @SuppressLint("WrongConstant")
   private void createEventHandlers() {
 
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
       shortcutManager = getSystemService(ShortcutManager.class);
     }
 
-    firebaseAnalytics = FirebaseAnalytics.getInstance(this);
+//    firebaseAnalytics = FirebaseAnalytics.getInstance(this);
     apppsListView = findViewById(R.id.appList);
     numberTextView = findViewById(R.id.numberTextView);
     countHelper = new CountHelper(this);
@@ -112,50 +105,12 @@ public class MainActivity extends Activity implements ThreadHelper.ThreadHeplerU
         item.setCount(item.getCount() + 1);
         countHelper.recordAppCount(item.getPackageName(), item.getCount(), MainActivity.this);
       }
-      updateShortcuts();
-
+//      updateShortcuts();
+//      Log.d("chuqq", "item app: "+ item.getAppName());
       Intent intent;
-      if (item.getAppName().contains("000")) {
-          Log.d("chuqq", "infi000");
-          intent = getPackageManager().getLaunchIntentForPackage("air.tv.douyu.android");
-//          intent = new Intent();
-          intent.setPackage("air.tv.douyu.android");
-          intent.setAction("android.intent.action.VIEW");
-          intent.addCategory("android.intent.category.DEFAULT");
-          intent.setData(Uri.parse("dydeeplink://?type=80001"));
-//          intent.setClassName()
-          intent.setComponent(new ComponentName("air.tv.douyu.android", "tv.douyu.view.activity.launcher.DYLauncherActivity"));
-          intent.putExtra("roomId", 11017);
-      }
-      if (item.getAppName() == "微信-扫一扫") {
-        intent = getPackageManager().getLaunchIntentForPackage("com.tencent.mm");
-        intent.putExtra("LauncherUI.From.Scaner.Shortcut", true);
-      }
-      else if (item.getAppName() == "QQ音乐-听歌识曲") {
-        intent = new Intent();
-        intent.setAction("android.intent.action.VIEW");
-//        intent.setFlags(0x1000c000);
-        intent.setComponent(new ComponentName("com.tencent.qqmusic", "com.tencent.qqmusic.third.DispacherActivityForThird"));
-        intent.putExtra("shortcutScheme", "recognize");
-      }
-      else if (item.getType() == "uri-scheme") {
-        intent = new Intent();
-        intent.setAction("android.intent.action.VIEW");
-        intent.setData(Uri.parse(item.getPackageName()));
-      }
-      else if (item.getType() == "shortcut") {
-        intent = getPackageManager().getLaunchIntentForPackage(item.getPackageName());
-        if (item.getAction() != null && item.getAction() != "") {
-          intent.setAction(item.getAction());
-        }
-        if (item.getClassName() != null && item.getClassName() != "") {
-          intent.setComponent(new ComponentName(item.getPackageName(), item.getClassName()));
-        }
-        if (item.getExtras() != null) {
-            for (Map.Entry<String, String> entry: item.getExtras().entrySet()) {
-              intent.putExtra(entry.getKey(), entry.getValue());
-            }
-        }
+      if (item.getIntent() != null) {
+          Log.d("chuqq", "intent app: " + item.getAppName());
+          intent = item.getIntent();
       }
       else {
         // chuqq: 默认情况，作为应用拉起

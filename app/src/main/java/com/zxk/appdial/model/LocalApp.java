@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 
 /**
@@ -22,6 +23,16 @@ public class LocalApp implements Serializable, Comparable<LocalApp> {
   private String className;
 
   private HashMap<String, String> extras; // chuqq: 仅当type为shortcut时有效
+
+  public Intent getIntent() {
+    return intent;
+  }
+
+  public void setIntent(Intent intent) {
+    this.intent = intent;
+  }
+
+  private Intent intent;// chuqq: 直接使用intent，其他信息都尽量保存在intent中，例如className、extras等
 
   private Drawable icon;
   private String simpleChn;
