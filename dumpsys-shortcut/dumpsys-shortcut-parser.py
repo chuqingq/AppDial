@@ -1,6 +1,8 @@
 import re
 import json
 
+# adb shell dumpsys shortcut > dumpsys-shortcut.txt
+
 reShortcutInfo = re.compile(r' {10}ShortcutInfo [^\n]*(\n {12}(?P<name>[^\n=]+)=(?P<value>[^\n]+))+', re.DOTALL)
 
 rePackageName = re.compile(r'packageName=(.*)')
