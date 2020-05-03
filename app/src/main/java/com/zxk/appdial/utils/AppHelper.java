@@ -441,7 +441,7 @@ public class AppHelper implements ThreadHelper.ThreadHeplerUser<PackageInfo> {
       addApp(app);
     }
     {
-      String name = "高德地图从这里出发";
+      String name = "高德地图去公司";
       String uri = "amapuri://commute?clearStack=1&dest=corp&shortcutLabel=去公司";
 
       Intent intent = new Intent();
